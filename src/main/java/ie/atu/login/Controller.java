@@ -26,6 +26,11 @@ public class Controller {
         }
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return "my string";
+    }
+
     @PostMapping("/createaccount")
     public ResponseEntity<String> createAdmin(@RequestBody AccountCreationData accountCreationData) {
         AdminCredentials newAccount = accountCreationData.getNewDetails();
